@@ -1,4 +1,4 @@
-#include "square.h"
+#include "../square.h"
 #include <iostream>
 
 int main(int argc, char *argv[])

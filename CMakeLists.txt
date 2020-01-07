@@ -9,7 +9,7 @@ project (cmake-arduino)
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES
     square.cpp
-    main.cpp
+    main_cpp/main.cpp
 )
 
 # Add an executable with the above sources
