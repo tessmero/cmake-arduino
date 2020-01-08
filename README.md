@@ -32,3 +32,11 @@ cmake ..
 make
 ./cmake-arduino
 ```
+
+## Details
+
+`cmake-ardiuno.ino` is the arduino frontend. It uses the arduino-specific `Serial.print` function to display output. It could be expanded to accomodate additional input/output devices like sensors. It should contain only the bare-minimum amount of code, since it can only be debugged using actual hardware.
+
+`main/main.cpp` is the cross-platform frontend for demonstration purposes. It uses the standard library `iostream` to display output. In this example it is used to make an executable to show that cross-platform compiling works.
+
+The remaining code is the backend. The backend contains all of the meaningful logic. In this example the backend is composed of `square.cpp` and its header,  `square.h`. The back-end would be the target of automated tests. So, in order to safely add complexity, code should be added to the backend.
