@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/tessmero/cmake-arduino.svg?branch=add-travis-ci)](https://travis-ci.com/tessmero/cmake-arduino)
+[![Build Status](https://travis-ci.com/tessmero/cmake-arduino.svg?branch=master)](https://travis-ci.com/tessmero/cmake-arduino)
 
 # cmake-arduino
 A proof-of-concept Arduino program, where the back-end can be compiled cross-platform using CMake. 
