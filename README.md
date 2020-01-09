@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/tessmero/cmake-arduino.svg?branch=master)](https://travis-ci.com/tessmero/cmake-arduino)
 
 # cmake-arduino
-A proof-of-concept Arduino program, where the back-end can be compiled cross-platform using CMake. 
+A proof-of-concept Arduino program, where the back-end can be compiled cross-platform using [CMake](https://cmake.org/). 
 
 This program computes five squared.
 
@@ -9,7 +9,7 @@ This program computes five squared.
 
 Developing Arduino code this way makes the code more accessible, since developers do not need a device to run the code.
 
-Using a standard build tool like CMake opens up the possibility to add unit testing and continuous integration.
+Using a standard build tool like CMake opens up the possibility to add unit testing and continuous integration. This example includes both: unit tests (using [googletest](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)), and continuous integration (using [Travis-CI](https://travis-ci.com/)).
 
 ## Compile in Arduino
 
@@ -24,7 +24,7 @@ NOTE: tested on Teensy 3.2
 ## Build and Compile with CMake
 
 1. Clone this repository
-2. Build with CMake and run the created executable
+2. Build with CMake
 
 ```
 cd cmake-arduino
@@ -32,6 +32,17 @@ mkdir build
 cd build
 cmake ..
 make
+```
+
+3. Run unit tests
+
+```
+make test
+```
+
+4. Run the created executable
+
+```
 ./cmake-arduino
 ```
 
@@ -41,4 +52,4 @@ make
 
 `main/main.cpp` is the cross-platform frontend for demonstration purposes. It uses the standard library `iostream` to display output. In this example it is used to make an executable to show that cross-platform compiling works.
 
-The remaining code is the backend. The backend contains all of the meaningful logic. In this example the backend is composed of `square.cpp` and its header,  `square.h`. The back-end would be the target of automated tests. So, in order to safely add complexity, code should be added to the backend.
+`square.cpp` and its header `square.h` are the backend. The backend can be easily debugged and is the target of automated tests. So, in order to safely add complexity, code should be added primarily to the backend.
