@@ -10,7 +10,7 @@ TEST_F(SquareTests, five )
 {
     int toSquare = 5;
 
-    int = square(toSquare);
+    int res = square_number(toSquare);
 
     EXPECT_EQ(res, 25 );
 
@@ -20,7 +20,7 @@ TEST_F(SquareTests, negative_six )
 {
     int toSquare = -6;
 
-    int res = square(toSquare);
+    int res = square_number(toSquare);
 
     EXPECT_EQ(res, 36 );
 }
