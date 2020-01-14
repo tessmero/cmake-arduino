@@ -34,7 +34,7 @@ add_subdirectory(3rd_party/google-test)
 enable_testing()
 
 # Add a testing executable
-add_executable(unit_tests unit_tests.cpp)
+add_executable(unit_tests unit_tests/unit_tests.cpp)
 
 target_link_libraries(unit_tests
     example_google_test
