@@ -9,6 +9,7 @@ project (cmake-arduino)
 # Create a sources variable with a link to all cpp files to compile
 set(SOURCES
     square.cpp
+    json_computer.cpp
     main_cpp/main.cpp
 )
 
