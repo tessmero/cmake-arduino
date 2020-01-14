@@ -1,4 +1,4 @@
-#include "square.h"
+#include "json_computer.h"
 
 
 void setup()   {
@@ -7,7 +7,13 @@ void setup()   {
 
 void loop()                     
 {
-  Serial.print("5 squared = ");
-  Serial.println(square_number(5));
+  char json_in[] = "{sum:[{\"square\":6},{\"no-square\":7}]}";
+  Serial.print("input: ");
+  Serial.println(json_in);
+  
+  int result = compute( json_in );
+  Serial.print("output: ");
+  Serial.println(result);
+  
   delay(1000);
 }
