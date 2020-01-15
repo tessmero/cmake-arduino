@@ -3,7 +3,7 @@
 # cmake-arduino
 A proof-of-concept Arduino program, where the back-end can be compiled cross-platform using [CMake](https://cmake.org/). 
 
-This program computes five squared.
+This program parses a "domain specific language" from json.
 
 ## Why?
 
