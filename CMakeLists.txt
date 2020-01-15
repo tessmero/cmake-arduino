@@ -26,6 +26,7 @@ add_executable(cmake-arduino ${SOURCES})
 # Add an library for the example classes
 add_library(example_google_test 
     square.cpp
+    json_computer.cpp
 )
 
 add_subdirectory(3rd_party/google-test)
@@ -34,7 +35,10 @@ add_subdirectory(3rd_party/google-test)
 enable_testing()
 
 # Add a testing executable
-add_executable(unit_tests unit_tests/unit_tests.cpp)
+add_executable(unit_tests 
+  unit_tests/square_tests.cpp
+  unit_tests/json_computer_tests.cpp
+)
 
 target_link_libraries(unit_tests
     example_google_test
