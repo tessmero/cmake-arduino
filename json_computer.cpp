@@ -12,7 +12,7 @@ int compute(char* json_in)
   
   JsonArray sumArr = doc["sum"];
     
-  for( int i = 0 ; i < sumArr.size() ; i++ ) {
+  for( unsigned int i = 0 ; i < sumArr.size() ; i++ ) {
     JsonObject part = sumArr[i];      
     if( part.containsKey( "square" ) ){
       sum += square_number(part["square"]);
